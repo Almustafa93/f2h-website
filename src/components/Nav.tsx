@@ -40,6 +40,7 @@ export const Nav = () => {
         bg: isScrolled ? 'bg-brand-purple shadow-lg' : 'bg-brand-purple/95 backdrop-blur-md',
         text: 'text-white',
         logo: 'text-white',
+        logoImage: '/logo-white.png',
         divider: 'bg-white/20',
         button: 'bg-brand-red text-white',
         mobileMenu: 'bg-brand-purple text-white',
@@ -51,6 +52,7 @@ export const Nav = () => {
         bg: isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white',
         text: 'text-brand-purple',
         logo: 'text-brand-purple',
+        logoImage: '/logo.png',
         divider: 'bg-brand-purple/20',
         button: 'bg-brand-red text-white',
         mobileMenu: 'bg-white text-brand-purple',
@@ -78,7 +80,7 @@ export const Nav = () => {
             className="flex items-center gap-2 cursor-pointer"
           >
             <img
-              src="/logo.png"
+              src={styles.logoImage}
               alt="F2H Logo"
               className="h-16 w-auto object-contain"
             />

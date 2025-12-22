@@ -17,7 +17,7 @@ export const Footer = () => (
         <div className="md:col-span-5 space-y-4">
           <div className="inline-block">
             <img
-              src="/logo.png"
+              src="/logo-white.png"
               alt="F2H Logo"
               className="h-16 w-auto object-contain"
             />
