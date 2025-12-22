@@ -80,7 +80,7 @@ export const Nav = () => {
             <img
               src="/logo.png"
               alt="F2H Logo"
-              className="h-14 w-auto object-contain bg-white/95 backdrop-blur-sm rounded-lg py-0.5 px-3 shadow-md"
+              className="h-16 w-auto object-contain"
             />
           </motion.div>
         </Link>

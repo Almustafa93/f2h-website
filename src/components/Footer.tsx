@@ -19,7 +19,7 @@ export const Footer = () => (
             <img
               src="/logo.png"
               alt="F2H Logo"
-              className="h-12 w-auto object-contain bg-white rounded-lg py-1 px-2 shadow-lg"
+              className="h-16 w-auto object-contain"
             />
           </div>
           <p className="text-white/50 text-sm leading-relaxed font-medium max-w-sm">
