@@ -37,9 +37,9 @@ const ICON_MAP: Record<number, React.ReactNode> = {
 
 const Hero = () => (
   <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-purple">
-    <div className="absolute inset-0 z-0">
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-red/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-purple-light rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+    <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-red/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 hidden md:block" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-purple-light rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 hidden md:block" />
       <div className="absolute inset-0 bg-circuit opacity-10" />
     </div>
 
