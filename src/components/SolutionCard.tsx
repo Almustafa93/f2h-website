@@ -22,13 +22,15 @@ export const SolutionCard = ({ item, index }: { item: any, index: number }) => {
         viewport={{ once: true }}
         transition={{ delay: index * 0.1 }}
         onClick={() => setIsOpen(true)}
-        className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer"
+        className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer will-change-transform"
       >
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={item.image}
-            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 will-change-transform"
             alt={item.title}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-purple/95 via-brand-purple/80 to-transparent transition-opacity duration-500" />

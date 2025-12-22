@@ -13,7 +13,7 @@ export const Nav = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -21,7 +21,7 @@ export const Nav = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Solutions', href: '/solutions' },
-    { name: 'Preferences', href: '/preferences' },
+    { name: 'References', href: '/references' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -71,7 +71,7 @@ export const Nav = () => {
 
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'py-2' : 'py-3'} ${navbarBg}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 py-3 ${navbarBg}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/">
           <motion.div

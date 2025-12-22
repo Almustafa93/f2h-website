@@ -154,7 +154,7 @@ const Hero = () => (
 
 const TrustedBy = () => (
   <div className="py-12 bg-white border-y border-brand-purple/5 overflow-hidden">
-    <div className="flex gap-20 animate-marquee whitespace-nowrap group items-center">
+    <div className="flex gap-20 animate-marquee whitespace-nowrap group items-center will-change-transform">
       {[...CLIENTS, ...CLIENTS, ...CLIENTS].map((client: any, idx) => (
         <div key={idx} className="flex items-center justify-center opacity-40 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0">
           <div className="w-48 h-20 flex items-center justify-center relative">
@@ -162,6 +162,7 @@ const TrustedBy = () => (
               <img
                 src={client.logo}
                 alt={client.name}
+                loading="lazy"
                 className="max-w-full max-h-full object-contain transition-transform duration-500 hover:scale-110"
               />
             ) : (

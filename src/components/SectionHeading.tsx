@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const SectionHeading = ({ title, subtitle, light = false }: { title: string, subtitle: string, light?: boolean }) => (
   <div className="mb-16 text-center">
-    <motion.h2 
+    <motion.h2
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -13,14 +13,14 @@ export const SectionHeading = ({ title, subtitle, light = false }: { title: stri
     >
       {title}
     </motion.h2>
-    <motion.div 
-      initial={{ width: 0 }}
-      whileInView={{ width: 80 }}
+    <motion.div
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
       viewport={{ once: true }}
       transition={{ delay: 0.3, duration: 0.8 }}
-      className="h-1.5 bg-brand-red mx-auto rounded-full mb-6"
+      className="h-1.5 bg-brand-red mx-auto rounded-full mb-6 w-20 will-change-transform"
     />
-    <motion.p 
+    <motion.p
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
