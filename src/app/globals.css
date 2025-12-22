@@ -1,0 +1,128 @@
+@import "tw-animate-css";
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-plus-jakarta: var(--font-plus-jakarta), sans-serif;
+  --color-brand-purple: #21114F;
+  --color-brand-red: #E53422;
+  --color-brand-red-light: #ff4d3d;
+  --color-brand-purple-light: #2f1d66;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+  :root {
+    --radius: 0.75rem;
+    --background: #ffffff;
+    --foreground: #21114F;
+    --card: #ffffff;
+    --card-foreground: #21114F;
+    --popover: #ffffff;
+    --popover-foreground: #21114F;
+    --primary: #21114F;
+    --primary-foreground: #ffffff;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #21114F;
+  }
+
+  @layer base {
+    * {
+      @apply border-border outline-ring/50;
+    }
+    body {
+      @apply text-foreground font-plus-jakarta bg-white;
+      min-height: 100vh;
+    }
+  }
+
+.bg-brand-dark {
+  background-color: #21114F;
+  color: #ffffff;
+}
+
+.bg-page-gradient {
+  background: radial-gradient(circle at top right, #2f1d66, #21114F 50%, #21114F 100%);
+}
+
+.bg-soft-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.text-brand-primary {
+  color: #21114F;
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.glass-dark {
+  @apply bg-brand-purple/80 backdrop-blur-xl border border-white/10 shadow-2xl;
+}
+
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-brand-red-light;
+}
+
+.bg-circuit {
+  background-image: radial-gradient(circle at 2px 2px, rgba(229, 52, 34, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
