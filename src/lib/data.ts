@@ -193,7 +193,7 @@ export const CLIENTS = [
   { name: "Grandway", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/GRANDWAY-1766350199071.png", isImage: true },
   { name: "TAWAA", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/TAWAA-1766350199069.png", isImage: true },
   { name: "ZTT", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/ZTT-1766350199070.png", isImage: true },
-  { name: "DNAKE", logo: "/images/partners/dnake_new.jpg", isImage: true },
+  { name: "DNAKE", logo: "/images/partners/DNAKE.png", isImage: true },
   { name: "JILONG", logo: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/JILONG-1766350199070.png", isImage: true }
 ];
 
