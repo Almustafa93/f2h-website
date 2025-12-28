@@ -2,12 +2,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
-import { MessageCircle } from "lucide-react";
-import * as motion from "framer-motion/client";
-
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
@@ -26,17 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" className={plusJakartaSans.variable}>
       <body className="antialiased selection:bg-brand-red selection:text-white">
-        <Nav />
-        <main>{children}</main>
-        <Footer />
-
-        {/* Floating CTA Mobile */}
-        <div className="fixed bottom-6 right-6 z-40 md:hidden">
-          <button className="w-16 h-16 rounded-full bg-brand-red text-white shadow-2xl flex items-center justify-center">
-            <MessageCircle size={32} />
-          </button>
-        </div>
-
+        {children}
       </body>
     </html>
   );
